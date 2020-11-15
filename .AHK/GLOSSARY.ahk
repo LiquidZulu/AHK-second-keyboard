@@ -9,7 +9,7 @@ GLOSSARY["Politics"]["Libertarianism"] := {}
 GLOSSARY["Politics"]["Libertarianism"]["Freedom"] 					:= "*Freedom* is the degree to which one may manipulate the *Capital* around them"
 GLOSSARY["Politics"]["Libertarianism"]["Capital"] 					:= "*Capital* is the valued means through which one utilises their *Liberty*"
 GLOSSARY["Politics"]["Libertarianism"]["Action"] 					:= "*Action* is purposeful behaviour"
-GLOSSARY["Politics"]["Libertarianism"]["Actor"] 					:= "An *Actor* is one who engages in action"
+GLOSSARY["Politics"]["Libertarianism"]["Actor"] 					:= "An *Actor* is one who engages in *action*"
 GLOSSARY["Politics"]["Libertarianism"]["Interaction"] 				:= "*Interaction* is the mutual engagement of *Ethical* *Actors*"
 GLOSSARY["Politics"]["Libertarianism"]["Interference"] 			    := "A *interferes* with B if a⊆A is contradictory to b⊆B"
 GLOSSARY["Politics"]["Libertarianism"]["Compatibility"] 			:= "*Compatibility* of A and B ⇒ A does not *interfere* with B ∧ B does not *interfere* with A"
@@ -35,6 +35,12 @@ GLOSSARY["Politics"]["Libertarianism"]["Anarcho-Capitalism"] 		:= "*Anarcho-Capi
 GLOSSARY["Politics"]["Libertarianism"]["State"] 	    			:= "A *State* is any organisation that *society* exempts from the NAP"
 GLOSSARY["Politics"]["Libertarianism"]["Government"] 				:= "*Government* is the *State* that maintains a monopoly on power over the area in question"
 GLOSSARY["Politics"]["Libertarianism"]["Anarchy"] 					:= "*Anarchy* is the absence of *Government*"
+
+GLOSSARY["Politics"]["Democracy"]["Democracy"]  := "*Democracy* is a system wherein the *Demos* are given the power of *state*, their decision is often determined by vote"
+GLOSSARY["Politics"]["Democracy"]["Demos"]      := "The *Demos* are the *actors* in a *democratic* *society*"
+
+GLOSSARY["Politics"]["Socialism"]["Socialism"]              := "*Socialism* is a system wherein the *Means of Production* are socially controlled"
+GLOSSARY["Politics"]["Socialism"]["Means of Production"]    := "The *Means of Production*"
 
 
 GLOSSARY["Nations"]["Scotland"] := {}

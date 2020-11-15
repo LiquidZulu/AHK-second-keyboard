@@ -165,3 +165,16 @@ UPDOWN_L["W"]     := ["ʍ", "Ϻ"]
 UPDOWN_L["X"]     := ["x", "X"]
 UPDOWN_L["Y"]     := ["ʎ", "⅄"]
 UPDOWN_L["Z"]     := ["z", "Z"]
+
+
+SUBSUPERSCRIPT := {}
+SUBSUPERSCRIPT[0] := ["₀", "⁰"]
+SUBSUPERSCRIPT[1] := ["₁", "¹"]
+SUBSUPERSCRIPT[2] := ["₂", "²"]
+SUBSUPERSCRIPT[3] := ["₃", "³"]
+SUBSUPERSCRIPT[4] := ["₄", "⁴"]
+SUBSUPERSCRIPT[5] := ["₅", "⁵"]
+SUBSUPERSCRIPT[6] := ["₆", "⁶"]
+SUBSUPERSCRIPT[7] := ["₇", "⁷"]
+SUBSUPERSCRIPT[8] := ["₈", "⁸"]
+SUBSUPERSCRIPT[9] := ["₉", "⁹"]

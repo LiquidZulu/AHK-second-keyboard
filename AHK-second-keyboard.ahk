@@ -103,27 +103,14 @@ K[2][KCM] := AHI.CreateContextManager(K[2][KID])
 
 	; sc03a::backspace
 
-	;AppsKey::ToolTip Press < or > to cycle through windows.
-	;AppsKey Up::ToolTip
-	;~AppsKey & <::Send !+{Esc}
-	;~AppsKey & >::Send !{Esc}
 
-	; YEIO arrow keys -- WIP!!!
-	YEIO_ARROWS := False
+	; YEIO arrow keys
 
-	Alt::ToolTip Press < or > to cycle through windows.
-	Alt Up::
-	ToolTip
-	;YEIO_ARROWS := ~YEIO_ARROWS
-	MsgBox % YEIO_ARROWS
-	return
+	>!SC019::send, {up}
+	>!SC026::send, {left}
+	>!SC027::send, {down}
+	>!SC028::send, {right}
 
-	#if YEIO_ARROWS
-		SC019::up
-		SC026::down
-		SC027::left
-		SC028::right
-	#if
 
 #if
 
@@ -183,16 +170,16 @@ K[2][KCM] := AHI.CreateContextManager(K[2][KID])
 	;;------------------------  MISC  --------------------------;;
 
 	*SC029::`
-	*SC002::MsgBox % "  :" IS__L_SHIFT "  :" IS__R_SHIFT "  :" IS__L_ALT "  :" IS__R_ALT "  :" IS__L_CTRL "  :" IS__R_CTRL
-	*SC003:: 
-	*SC004::
-	*SC005::
-	*SC006::
-	*SC007::
-	*SC008::
-	*SC009::
-	*SC00a::
-	*SC00b::
+	*SC002::parseKey(1)
+	*SC003::parseKey(2)
+	*SC004::parseKey(3)
+	*SC005::parseKey(4)
+	*SC006::parseKey(5)
+	*SC007::parseKey(6)
+	*SC008::parseKey(7)
+	*SC009::parseKey(8)
+	*SC00a::parseKey(9)
+	*SC00b::parseKey(0)
 	*SC00c::
 	*SC00d::parseKey(EQUALS[1])
 	*backspace::backspace
@@ -264,6 +251,11 @@ K[2][KCM] := AHI.CreateContextManager(K[2][KID])
 	left::left
 	right::right
 
+	+up::Send, {U+2191}
+	+down::Send, {U+2193}
+	+left::Send, {U+2190}
+	+right::Send, {U+2192}
+
 	;;================== THE NUMPAD ======================;;
 
 	numpad0::
@@ -273,8 +265,8 @@ K[2][KCM] := AHI.CreateContextManager(K[2][KID])
 	numpad4::
 	numpad5::
 	numpad6::
-	numpad7::
-	numpad8::
+	numpad7::Run, D:\GIMP 2\bin\gimp-2.10.exe
+	numpad8::Run, D:\!!!_BUDGET\2020-07\budget.xlsx
 	numpad9::tooltip,[F23] %A_thishotKey%
 
 

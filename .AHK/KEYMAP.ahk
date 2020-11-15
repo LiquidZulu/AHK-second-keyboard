@@ -155,3 +155,27 @@ loop, 26{
     KEYMAP[alphabet[LETTER][2]][R_CTRL]                             := alphabet[LETTER][1]
     LETTER++
 }
+
+
+i := 0
+loop, 10{
+    KEYMAP[i] := {}
+    KEYMAP[i][DEFAULT]                            := SUBSUPERSCRIPT[i][1]
+    KEYMAP[i][CAPS]                               := SUBSUPERSCRIPT[i][2]
+    KEYMAP[i][NEGATED]                            := NEGATION SUBSUPERSCRIPT[i][1]
+    KEYMAP[i][NEGATED | CAPS]                     := NEGATION SUBSUPERSCRIPT[i][2]
+    KEYMAP[i][UPSIDE_DOWN]                        := SUBSUPERSCRIPT[i][2]
+    KEYMAP[i][UPSIDE_DOWN | CAPS]                 := SUBSUPERSCRIPT[i][1]
+    KEYMAP[i][NEGATED | UPSIDE_DOWN]              := NEGATION SUBSUPERSCRIPT[i][2]
+    KEYMAP[i][NEGATED | UPSIDE_DOWN | CAPS]       := NEGATION SUBSUPERSCRIPT[i][1]
+    KEYMAP[i][BLACKBOARD_BOLD]                    := SUBSUPERSCRIPT[i][1]
+    KEYMAP[i][BLACKBOARD_BOLD | CAPS]             := SUBSUPERSCRIPT[i][2]
+    KEYMAP[i][NEGATED | BLACKBOARD_BOLD]          := NEGATION SUBSUPERSCRIPT[i][1]
+    KEYMAP[i][NEGATED | BLACKBOARD_BOLD | CAPS]   := NEGATION SUBSUPERSCRIPT[i][2]
+    KEYMAP[i][TO_GREEK]                           := SUBSUPERSCRIPT[i][1]
+    KEYMAP[i][TO_GREEK | CAPS]                    := SUBSUPERSCRIPT[i][2]
+    KEYMAP[i][NEGATED | TO_GREEK]                 := NEGATION SUBSUPERSCRIPT[i][1]
+    KEYMAP[i][NEGATED | TO_GREEK | CAPS]          := NEGATION SUBSUPERSCRIPT[i][2]
+    KEYMAP[i][R_CTRL]                             := SUBSUPERSCRIPT[i][1]
+    i++
+}
