@@ -16,6 +16,7 @@
 #SingleInstance force
 #Persistent
 #NoEnv
+#MaxHotkeysPerInterval 2000
 #include ./.AHK/.ahk
 
 SetWorkingDir %A_ScriptDir%
@@ -48,55 +49,55 @@ K[2][KCM] := AHI.CreateContextManager(K[2][KID])
 
 	; Colemak Mod-DH wide mapping for ANSI boards
 
-	;SC002::1
-	;SC003::2
-	;SC004::3
-	;SC005::4
-	;SC006::5
-	;SC007::6
-	SC008::=
-	SC009::7
-	SC00a::8
-	SC00b::9
-	SC00c::0
-	SC00d::-
+	; ;SC002::1
+	; ;SC003::2
+	; ;SC004::3
+	; ;SC005::4
+	; ;SC006::5
+	; ;SC007::6
+	; SC008::=
+	; SC009::7
+	; SC00a::8
+	; SC00b::9
+	; SC00c::0
+	; SC00d::-
 
-	;SC010::q
-	;SC011::w
-	SC012::f
-	SC013::p
-	SC014::b
-	SC015::[
-	SC016::j
-	SC017::l
-	SC018::u
-	SC019::y
-	SC01A::;
-	SC01B::'
+	; ;SC010::q
+	; ;SC011::w
+	; SC012::f
+	; SC013::p
+	; SC014::b
+	; SC015::[
+	; SC016::j
+	; SC017::l
+	; SC018::u
+	; SC019::y
+	; SC01A::;
+	; SC01B::'
 
-	;SC01E::a
-	SC01F::r
-	SC020::s
-	SC021::t
-	SC022::g
-	SC023::]
-	SC024::m
-	SC025::n
-	SC026::e
-	SC027::i
-	SC028::o
+	; ;SC01E::a
+	; SC01F::r
+	; SC020::s
+	; SC021::t
+	; SC022::g
+	; SC023::]
+	; SC024::m
+	; SC025::n
+	; SC026::e
+	; SC027::i
+	; SC028::o
 
-	SC02b::\
-	SC02c::x
-	SC02d::c
-	SC02e::d
-	;SC02f::v
-	SC030::z
-	SC031::/
-	SC032::k
-	SC033::h
-	SC034::,
-	SC035::.
+	; SC02b::\
+	; SC02c::x
+	; SC02d::c
+	; SC02e::d
+	; ;SC02f::v
+	; SC030::z
+	; SC031::/
+	; SC032::k
+	; SC033::h
+	; SC034::,
+	; SC035::.
 
 
 	; set Backspace to CapsLock key
@@ -106,10 +107,15 @@ K[2][KCM] := AHI.CreateContextManager(K[2][KID])
 
 	; YEIO arrow keys
 
-	>!SC019::send, {up}
-	>!SC026::send, {left}
-	>!SC027::send, {down}
-	>!SC028::send, {right}
+	>!y::send, {up}
+	>!e::send, {left}
+	>!i::send, {down}
+	>!o::send, {right}
+
+
+	; esc tilde
+
+	>!esc::`
 
 
 #if
@@ -262,12 +268,12 @@ K[2][KCM] := AHI.CreateContextManager(K[2][KID])
 	numpad1::
 	numpad2::
 	numpad3::
-	numpad4::
-	numpad5::
+	numpad4::Run, D:\Blender\Blender.exe
+	numpad5::Run, D:\WinDirStat\windirstat.exe
 	numpad6::
 	numpad7::Run, D:\GIMP 2\bin\gimp-2.10.exe
 	numpad8::Run, D:\!!!_BUDGET\2020-07\budget.xlsx
-	numpad9::tooltip,[F23] %A_thishotKey%
+	numpad9::Run, D:\Git\Git\git-bash.exe, D:\Git\Git
 
 
 	;;NumLock::tooltip, DO NOT USE THIS IN YOUR 2ND KEYBOARD!
@@ -277,7 +283,6 @@ K[2][KCM] := AHI.CreateContextManager(K[2][KID])
 	numpadAdd::
 	numpadEnter::
 	numpadDot::tooltip, [F23] %A_thishotKey%
-
 #if
 
 
@@ -305,7 +310,16 @@ parseKey(k){
 
 	global KEYMAP
 
-	SendRaw % KEYMAP[k][DEFAULT|(L_SHIFT*IS__L_SHIFT)|(R_SHIFT*IS__R_SHIFT)|(L_ALT*IS__L_ALT)|(R_ALT*IS__R_ALT)|(L_CTRL*IS__L_CTRL)|(R_CTRL*IS__R_CTRL)]
+	if not IS__R_CTRL{
+		SendRaw % KEYMAP[k][DEFAULT|(L_SHIFT*IS__L_SHIFT)|(R_SHIFT*IS__R_SHIFT)|(L_ALT*IS__L_ALT)|(R_ALT*IS__R_ALT)|(L_CTRL*IS__L_CTRL)]
+	}
+	else{
+		;switch CLIPBOARDS["MAP"][k][KEY_TYPE]{
+		;	case CLIPBOARD_COPY:
+		;		
+		;		return
+		;}
+	}
 	;ToolTip % DEFAULT|(L_SHIFT*IS__L_SHIFT)|(R_SHIFT*IS__R_SHIFT)|(L_ALT*IS__L_ALT)|(R_ALT*IS__R_ALT)|(L_CTRL*IS__L_CTRL)|(R_CTRL*IS__R_CTRL)
 }
 

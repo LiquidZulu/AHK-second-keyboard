@@ -128,7 +128,7 @@ GREEK_L["O"] := ["ο", "Ο"]
 GREEK_L["P"] := ["π", "Π"]
 GREEK_L["Q"] := ["τ", "Τ"]
 GREEK_L["R"] := ["ρ", "Ρ"]
-GREEK_L["S"] := ["Σ", "σ"]
+GREEK_L["S"] := ["σ", "Σ"]
 GREEK_L["T"] := ["θ", "Θ"]
 GREEK_L["U"] := ["υ", "v"]
 GREEK_L["V"] := ["φ", "Φ"]
@@ -178,3 +178,73 @@ SUBSUPERSCRIPT[6] := ["₆", "⁶"]
 SUBSUPERSCRIPT[7] := ["₇", "⁷"]
 SUBSUPERSCRIPT[8] := ["₈", "⁸"]
 SUBSUPERSCRIPT[9] := ["₉", "⁹"]
+
+
+
+
+CLIPBOARDS := {}
+
+CLIPBOARD_COPY  := 0
+CLIPBOARD_PASTE := 1
+
+KEY_TYPE     := 1
+KEY_SIBLING  := 2
+KEY_REL_CLIP := 3
+
+CLIPBOARDS["MAP"] := {"Q": [CLIPBOARD_COPY,"W",1],"W": [CLIPBOARD_PASTE,"Q",1],"E": [CLIPBOARD_COPY,"R",2],"R": [CLIPBOARD_PASTE,"E",2],"T": [CLIPBOARD_COPY,"Y",3],"Y": [CLIPBOARD_PASTE,"T",3],"U": [CLIPBOARD_COPY,"I",4],"I": [CLIPBOARD_PASTE,"U",4],"O": [CLIPBOARD_COPY,"P",5],"P": [CLIPBOARD_PASTE,"O",5],"[": [CLIPBOARD_COPY,"]",6],"]": [CLIPBOARD_PASTE,"[",6],"A": [CLIPBOARD_COPY,"S",7],"S": [CLIPBOARD_PASTE,"A",7],"D": [CLIPBOARD_COPY,"F",8],"F": [CLIPBOARD_PASTE,"D",8],"G": [CLIPBOARD_COPY,"H",9],"H": [CLIPBOARD_PASTE,"G",9],"J": [CLIPBOARD_COPY,"K",10],"K": [CLIPBOARD_PASTE,"J",10],"L": [CLIPBOARD_COPY,";",11],";": [CLIPBOARD_PASTE,"L",11],"'": [CLIPBOARD_COPY,"\",12],"\": [CLIPBOARD_PASTE,"'",12],"Z": [CLIPBOARD_COPY,"X",13],"X": [CLIPBOARD_PASTE,"Z",13],"C": [CLIPBOARD_COPY,"V",14],"V": [CLIPBOARD_PASTE,"C",14],"B": [CLIPBOARD_COPY,"N",15],"N": [CLIPBOARD_PASTE,"B",15],"M": [CLIPBOARD_COPY,",",16],",": [CLIPBOARD_PASTE,"M",16],".": [CLIPBOARD_COPY,"/",17],"/": [CLIPBOARD_PASTE,".",17]}
+
+
+/*
+CLIPBOARDS["MAP"] := {
+    
+    "Q": [CLIPBOARD_COPY,"W",1],
+    "W": [CLIPBOARD_PASTE,"Q",1],
+    
+    "E": [CLIPBOARD_COPY,"R",2],
+    "R": [CLIPBOARD_PASTE,"E",2],
+    
+    "T": [CLIPBOARD_COPY,"Y",3],
+    "Y": [CLIPBOARD_PASTE,"T",3],
+    
+    "U": [CLIPBOARD_COPY,"I",4],
+    "I": [CLIPBOARD_PASTE,"U",4],
+    
+    "O": [CLIPBOARD_COPY,"P",5],
+    "P": [CLIPBOARD_PASTE,"O",5],
+    
+    "[": [CLIPBOARD_COPY,"]",6],
+    "]": [CLIPBOARD_PASTE,"[",6],
+    
+    "A": [CLIPBOARD_COPY,"S",7],
+    "S": [CLIPBOARD_PASTE,"A",7],
+    
+    "D": [CLIPBOARD_COPY,"F",8],
+    "F": [CLIPBOARD_PASTE,"D",8],
+    
+    "G": [CLIPBOARD_COPY,"H",9],
+    "H": [CLIPBOARD_PASTE,"G",9],
+    
+    "J": [CLIPBOARD_COPY,"K",10],
+    "K": [CLIPBOARD_PASTE,"J",10],
+    
+    "L": [CLIPBOARD_COPY,";",11],
+    ";": [CLIPBOARD_PASTE,"L",11],
+    
+    "'": [CLIPBOARD_COPY,"\",12],
+    "\": [CLIPBOARD_PASTE,"'",12],
+    
+    "Z": [CLIPBOARD_COPY,"X",13],
+    "X": [CLIPBOARD_PASTE,"Z",13],
+    
+    "C": [CLIPBOARD_COPY,"V",14],
+    "V": [CLIPBOARD_PASTE,"C",14],
+    
+    "B": [CLIPBOARD_COPY,"N",15],
+    "N": [CLIPBOARD_PASTE,"B",15],
+    
+    "M": [CLIPBOARD_COPY,",",16],
+    ",": [CLIPBOARD_PASTE,"M",16],
+    
+    ".": [CLIPBOARD_COPY,"/",17],
+    "/": [CLIPBOARD_PASTE,".",17]
+}*/

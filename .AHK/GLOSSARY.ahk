@@ -36,9 +36,11 @@ GLOSSARY["Politics"]["Libertarianism"]["State"] 	    			:= "A *State* is any org
 GLOSSARY["Politics"]["Libertarianism"]["Government"] 				:= "*Government* is the *State* that maintains a monopoly on power over the area in question"
 GLOSSARY["Politics"]["Libertarianism"]["Anarchy"] 					:= "*Anarchy* is the absence of *Government*"
 
+GLOSSARY["Politics"]["Democracy"] := {}
 GLOSSARY["Politics"]["Democracy"]["Democracy"]  := "*Democracy* is a system wherein the *Demos* are given the power of *state*, their decision is often determined by vote"
 GLOSSARY["Politics"]["Democracy"]["Demos"]      := "The *Demos* are the *actors* in a *democratic* *society*"
 
+GLOSSARY["Politics"]["Socialism"] := {}
 GLOSSARY["Politics"]["Socialism"]["Socialism"]              := "*Socialism* is a system wherein the *Means of Production* are socially controlled"
 GLOSSARY["Politics"]["Socialism"]["Means of Production"]    := "The *Means of Production*"
 

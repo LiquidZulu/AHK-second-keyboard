@@ -155,6 +155,7 @@ loop, 26{
     KEYMAP[alphabet[LETTER][2]][R_CTRL]                             := alphabet[LETTER][1]
     LETTER++
 }
+KEYMAP["E"][NEGATED | UPSIDE_DOWN | CAPS] := "∄"
 
 
 i := 0
