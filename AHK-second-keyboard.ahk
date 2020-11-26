@@ -107,10 +107,10 @@ K[2][KCM] := AHI.CreateContextManager(K[2][KID])
 
 	; YEIO arrow keys
 
-	>!y::send, {up}
-	>!e::send, {left}
-	>!i::send, {down}
-	>!o::send, {right}
+	>!SC015::send, {up}
+	>!SC012::send, {left}
+	>!SC017::send, {down}
+	>!SC018::send, {right}
 
 
 	; esc tilde
