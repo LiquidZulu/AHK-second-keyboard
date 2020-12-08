@@ -1,0 +1,2 @@
+#define ENCRYPT_API __declspec(dllexport)
+#define ENCRYPT_API __declspec(dllimport)

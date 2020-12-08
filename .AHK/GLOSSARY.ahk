@@ -1,4 +1,4 @@
-;;; -- GLOSSARY -- ;;;
+﻿;;; -- GLOSSARY -- ;;;
 
 GLOSSARY := {}
 GLOSSARY["Politics"] := {}
